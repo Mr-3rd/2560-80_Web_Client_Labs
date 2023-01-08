@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/2560-80 Web Client Labs.iml" filepath="$PROJECT_DIR$/.idea/2560-80 Web Client Labs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../2560-80_Web_Client_Labs/.idea/2560-80_Web_Client_Labs.iml" filepath="$PROJECT_DIR$/../2560-80_Web_Client_Labs/.idea/2560-80_Web_Client_Labs.iml" />
     </modules>
   </component>
 </project>
