@@ -14,39 +14,39 @@
 
 <!--Begin the content of the website-->
 <body>
-<!--Create the main header for the page-->
+<!--Create the page title header-->
   <div>
     <h1 id="Page-Title">Some of my Favorite Things!</h1>
   </div>
-
+<!--Create the author signature-->
   <div>
     <h1 id="Author">Created by 3rd!</h1>
   </div>
-
-
+<!--create a class of favorite sections with different IDs, this is about movies-->
   <div class="Favorite-Section" id="Movie">
   <!--use a smaller header to differentiate sections of the site-->
     <h2>Favorite Movie</h2>
   <!--details about me with embedded links to my favorite movie-->
     <p>I'm a Video Buff. I grew up without TV, unless you count SnowBlown PBS on Rabbit Ears! <br>
     These days I watch EVERYTHING! If I had to pick a favorite: <br>
-    I've watched the Disney <i><span class="Favorite-Movie-Title">Cars</span></i> movie exactly 28 times. <br>
+    I've watched the Disney <span class="Favorite-Movie-Title">Cars</span> movie exactly 28 times. <br>
     Lightening McQueen is a hotshot racer oblivious to how poorly he treats the world around him. <br>
     A pewter blue Porsche 911 (996 body style) teaches him that life in the fast lane
       isn't all it's made out to be!<br>
-    More details about <i><span class="Favorite-Movie-Title">Cars</span></i> Can be found here:
+    More details about <span class="Favorite-Movie-Title">Cars</span> Can be found here:
       <a href="https://www.imdb.com/title/tt0317219/" target="_blank">Cars IMDB Page</a></p>
   </div>
 
+<!--Favorite section about music-->
   <div class="Favorite-Section" id="Music">
-  <!--detail my favorite music-->
+  <!--Title my favorite music-->
     <h2>Favorite Music</h2>
   <!--details about me with embedded links to my favorite music-->
     <p>I have the most eclectic taste in music, listening to over 82 Genres of music this year. <br>
     Dance, Pop, Classical, and Rock music make the core soundtrack to my daily life.<br>
-    The averag year, I listen to 17,000 minutes of PURE JAMS!<br>
+    The average year, I listen to 17,000 minutes of PURE JAMS!<br>
     Out of 1,232 songs played this year, one song was stuck on repeat: <br>
-    <b><span id="Favorite-Song-Title">Set Me Free - Lecrae</span></b> is my number one song for 2022!<br>
+    <span id="Favorite-Song-Title">Set Me Free - Lecrae</span> is my number one song for 2022!<br>
     <br>
     You can find all of my top favorite songs on Spotify:
     <a href="https://open.spotify.com/playlist/2eQCjeOl1bxtsgzZaG7ir3?si=39373d8940b64e6c"
@@ -55,48 +55,78 @@
       target="_blank"><b>Lecrae</b> the Music Artist</a></p>
   </div>
 
+<!--Favorite section about food-->
   <div class="Favorite-Section" id="Food">
     <h2>Favorite Foods</h2>
   <!--details about me with a list of my favorite foods-->
     <p>During the summer of 2021, I experienced a medical
-      <a href="https://www.mayoclinic.org/diseases-conditions/inguinal-hernia/symptoms-causes/syc-20351547#:~:text=An%20inguinal%20hernia%20occurs%20when,hernia%20isn't%20necessarily%20dangerous."
+      <a href="https://www.mayoclinic.org/diseases-conditions/inguinal-hernia/symptoms-causes/syc-20351547"
                                                              target="_blank">Inguinal Hernia</a><br>
-    I emerged from surgery with a completely different palate tolerance overnight. <br>
+    I emerged from surgery with a completely different palate tolerance overnight.<br>
     Carbs would cause me a unique distress, no longer residing amongst my favorite foods.<br>
-    <br>
     </p>
   </div>
-
+<!--Separate Section for the little food list-->
   <div Class="Favorite-Section" class=Food-List">
+<!--Add a small label to the list of foods-->
     <p id="New-Favorite-Foods"><b>New Favorite Foods</b>
+<!--Create the unordered list of food items-->
     <ul>
       <li>Zucchini Spaghetti</li>
+<!--Detail the most favorite foods-->
       <li class="Most-Favorite-Food">Braised Beef</li>
       <li>Air-Fried Chicken</li>
       <li class="Most-Favorite-Food">Peppered Spring Greens</li>
     </ul>
     </p>
   </div>
+<!--Close open markup tags-->
 
+<!--Create a favorite section for photos of my baby doggie-->
   <div class="Favorite-Section" id="Pictures">
     <h2>Favorite Photos</h2>
-    <!--details about me with a list of my favorite foods-->
+<!--details about me with a list of my favorite foods-->
     <p>I recently adopted the most adorable little princess! <br>
-      Her name: <span id="Iz-Zee-Dora">Iz Zee Dora</span> Her Breed:
+<!--Custom ids for dog name and breed for customizing-->
+      Her name: <span id="Dog-Name">Iz Zee Dora</span> Her Breed:
       <span id="Dog-Breed">Chihuahua & Rat Terrier</span><br></p>
-
-    <p><span id="PhotoHeader">Photos of Iz Zee</span><br>
-      <img src="IzZeeBox.JPEG"
-           height="2048" width="1536" alt="A Small Dog sitting in a box" title="Dog in a box"><br>
-      <img src="IzZeeCrabby.JPEG"
-           height="1185" width="1031" alt="A Small Dog sitting in a box" title="Dog in a box"><br>
-      <img src="IzZeeParty.JPEG"
-           height="2402" width="1835" alt="A Small Dog sitting in a box" title="Dog in a box"><br>
-      <img src="IzZeeSmile.JPEG"
-           height="2048" width="1536" alt="A Small Dog sitting in a box" title="Dog in a box"><br>
-      <br>
+    <p>
+<!--Create an ID for the dog photo table-->
+      <table id="Iz-Zee-Photos">
+<!--Create a table to sort all of my dog photos-->
+          <tr><th class="Photo-Header">Photos of Iz Zee:</span></th></tr>
+          <tr><td><img class="Favorite-Image" src="IzZeeCrabby.JPEG" height="245" width="202"
+                     alt="A Small Dog with an unamused face" title="Dog with a face"></td>
+            <td><img class="Favorite-Image" src="IzZeeBox.JPEG"
+                     height="256" width="192" alt="A Small Dog sitting in a box" title="Dog in a box"></td></tr>
+          <tr><td><img class="Favorite-Image" src="IzZeeParty.JPEG"
+                     height="266" width="203" alt="A Small Dog wearing a Hawaiian shirt" title="Dog in a shirt"></td>
+            <td><img class="Favorite-Image" src="IzZeeSmile.JPEG"
+                     height="256" width="192" alt="A Small Dog smiling very wide" title="Dog with a smile"></td></tr>
+      </table>
     </p>
   </div>
 
+<!--Create a table to store my favorite cars, I could have put links to car books here, but this was more me!-->
+  <div class="Favorite-Section" id="Cars">
+    <h2>Favorite Cars</h2>
+    <p>Check out this table detailing my favorite cars of all time!</p>
+<!--Separate  paragraph for the cars table-->
+    <p>
+<!--Create an Id for the cars table-->
+    <table id="Favorite-Cars">
+      <tr><th class="Car-Header">Year</th><th class="Car-Header">Make</th><th class="Car-Header">Model</th>
+          <th class="Car-Header">Link</th></tr>
+      <tr><td class="Car-Data">1993</td><td class="Car-Data">Porsche</td><td class="Car-Data">911 Turbo</td>
+<!--Links with target="_blank" open in a new tab-->
+        <td class="Car-Data"><a href="https://en.wikipedia.org/wiki/Porsche_911"
+                                target="_blank">911 Wikipedia</a></td></tr>
+      <tr><td class="Car-Data">2000</td><td class="Car-Data">Lotus</td><td class="Car-Data">Elise</td>
+        <td class="Car-Data"><a href="https://en.wikipedia.org/wiki/Lotus_Elise"
+                                target="_blank">Elise Wikipedia</a></td></tr>
+    </table>
+    </p>
+  </div>
+<!--Close open Markup Tags-->
 </body>
 </html>

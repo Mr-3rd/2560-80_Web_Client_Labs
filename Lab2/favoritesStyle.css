@@ -1,6 +1,6 @@
 /*Favorites website style sheet sorted: Justin 3rd: 1/9/2023*/
 
-/*Customize the main heading to look almost like a neon sign*/
+/*Customize the main headings to look almost like neon signs*/
 h1 {
 /*Aquamarine Color Font*/
     color: #8CFBDE;
@@ -48,7 +48,7 @@ body {
 p {
 /*Bring each new paragraph very close to the header, allowing for cleaere subject heading connections*/
     margin-top: -10px;
-/*Make all text Gainsboro*/
+/*Make all text Gainsboro color*/
     color: #DFDFDF;
     font-size: large;
 }
@@ -59,14 +59,14 @@ p {
 
 /*Change all link styles*/
 a:link {
-    color: cornflowerblue;
-    text-underline: cornflowerblue;
-/*Keep the underline on unclicked links*/
+/*Keep the underline on un-clicked links*/
     text-decoration: underline;
+    color: mediumaquamarine;
+    text-underline: yellow;
 }
 
 a:visited {
-    color: mediumturquoise;
+    color: #E708D8;
 /*When clicked, add a double underline*/
     text-decoration: double;
 }
@@ -87,13 +87,18 @@ a:active {
 
 /*Customize the unordered list*/
 ul {
-    /* Make background of unordered list . */
+    /* Make background of unordered list a dark aqua */
     background-color: #042A2B;
+    /*Add a bright aqua bevel style outline*/
     border-style: groove;
     border-color: aqua;
+    /*Change the text to a yellow*/
     color: #FFC759;
     display: inline-block;
+    /*Bring the list close to the label*/
     margin-top: -15px;
+    /*bring the photo section closer to the list*/
+    margin-bottom: -20px;
 }
 
 /*Customize List Item*/
@@ -102,7 +107,6 @@ li {
     font-size: 18px;
     margin: 7px;
     margin-left: -10px;
-
 }
 
 /*Customize the paragraph above the unordered list*/
@@ -115,7 +119,7 @@ li {
     text-decoration: underline;
 }
 
-/*Add round bullets to odd numbered items on the unordered list*/
+/*I didn't want to corrupt my list so I just changed the bullet type for favorites*/
 .Most-Favorite-Food {
     list-style-type: circle;
 }
@@ -126,7 +130,9 @@ li {
 }
 
 #Favorite-Song-Title {
-    text-shadow: 0px 0px 10px #DCEDFF;
+    font-weight: bold;
+    color: #8CFBDE;
+    text-shadow: 0px 0px 5px #DCEDFF;
 }
 
 .Favorite-Section {
@@ -137,11 +143,12 @@ li {
     display: table;
     /*This moves the element to the center of the site*/
     margin: 20px auto auto auto;
-    /*This moves the tezt to the center of the element*/
+    /*This moves the text to the center of the element*/
 }
 
 #Movie {
     border: 5px purple dashed;
+
 }
 
 #Music {
@@ -158,7 +165,9 @@ li {
 }
 
 .Favorite-Movie-Title {
-    text-shadow: 0px 0px 10px #F3EAF4;
+    font-style: italic;
+    text-shadow: 0px 0px 5px #F3EAF4;
+    color: chartreuse;
 }
 
 #Author {
@@ -172,8 +181,89 @@ li {
     margin: -5px auto auto auto;
     /*Use a relative font size for the accessibility*/
     font-size: large;
-    /*Set the header font types*/
+    /*Set the author font types*/
     font-family: cursive, sans-serif;
+    /*square the neon sign*/
     border-radius: 0px;
+    /*Shorten the distance to the edges*/
     border-spacing: 2px;
+    /*remove the shadow from h1*/
+    text-shadow: none;
 }
+
+/*Place a double yellow border around the photos section and bring the next really close*/
+#Pictures {
+    border: 5px yellow double;
+    margin-bottom: -30px;
+}
+
+/*bolden my dogs nane*/
+#Dog-Name {
+    font-weight: bold;
+    color: lightpink;
+}
+/*Italicize my dogs breed*/
+#Dog-Breed {
+    font-style: italic;
+    color: lightpink;
+}
+
+/*center the photos in the table and add a black background*/
+#Iz-Zee-Photos {
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    border-collapse: collapse;
+    color: #F3EAF4;
+}
+
+/*use the header id instead of th to customize the pets header*/
+.Photo-Header {
+    color: #FFC759;
+    text-align: left;
+    font-size: x-large;
+}
+
+/*customize the images by adding a border*/
+.Favorite-Image {
+    border: 10px solid #343434;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*Make the font describing the table very very bold!*/
+#Cars {
+    font-weight: bolder;
+}
+
+/*organize the data within the favorite cars table*/
+#Favorite-Cars {
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    /*White Khaki text*/
+    color: #F3EAF4;
+    /*Teal colored Border*/
+    border: 2px #8CFBDE solid;
+    padding: 10px;
+}
+
+/*create a header for the cars table, similar color, but different construction*/
+.Car-Header {
+    font-family: Calibri, Georgia, sans-serif;
+    color: #FFC759;
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+/*use a custom id to add borders around the car data,
+    the bright pink color and seperated squares adds to the neon effect*/
+.Car-Data {
+    border: 2px #F7567C solid;
+    padding: 10px;
+}
+
+
