@@ -195,6 +195,7 @@ li {
 #Pictures {
     border: 5px yellow double;
     margin-bottom: -30px;
+    text-align: center;
 }
 
 /*bolden my dogs nane*/
@@ -224,12 +225,12 @@ li {
     font-size: x-large;
 }
 
-/*customize the images by adding a border*/
+/*customize the images by adding a border, auto adjusting the size*/
 .Favorite-Image {
+    max-width: 80%;
+    height: auto;
     border: 10px solid #343434;
     border-radius: 4px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 /*Make the font describing the table very very bold!*/
@@ -246,7 +247,7 @@ li {
     color: #F3EAF4;
     /*Teal colored Border*/
     border: 2px #8CFBDE solid;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 /*create a header for the cars table, similar color, but different construction*/
