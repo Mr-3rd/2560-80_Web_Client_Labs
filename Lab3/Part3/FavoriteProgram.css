@@ -1,0 +1,77 @@
+/*Custom styling for the Favorite PProgram*/
+
+/*I've spent too much time on this question as of now, updating comments later*/
+body {
+    color: #9DFF00;
+    background-color: #000000;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #2C2520;
+    margin-bottom: -10px;
+    margin-top: -10px;
+    padding: 20px;
+}
+
+.my-2 {
+    background-color: #ffff00;
+}
+
+#GithubLink  {
+    display: table;
+    margin: auto auto auto auto;
+}
+
+#ProjectDetails {
+    margin-top: 30px;
+}
+
+h5 {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+h6 {
+    color: #129490; !important;
+}
+
+.card-body {
+    min-width: 400px;
+    background-color: black;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #000000 !important;
+    color: #EC6ACC; !important;
+    border-color: #EEF0F2; !important;
+}
+
+.card-link {
+    color: #97F3E4;
+    text-decoration-line: underline;
+}
+
+.card-link:hover {
+    color: #E708D8;
+}
+
+pre, code {
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    margin-bottom: -10px;
+    margin-top: 15px;
+}
+
+.card {
+    background-color: black;
+}
+

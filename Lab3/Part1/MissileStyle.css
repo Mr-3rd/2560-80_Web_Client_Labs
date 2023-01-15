@@ -1,0 +1,40 @@
+/*MissileAlert Stylesheet Justin Third*/
+
+/*change the background color to something grey*/
+body {
+    background-color: #DADDD8;
+}
+
+/*Dramaticize the header by adding font and spacing styles*/
+h1 {
+    color: black;
+    font-size: xxx-large;
+    margin: 15px 10px 20px 10px;
+    text-decoration: underline;
+}
+
+/*Establish the real alert as a bright yellow and red emergency button*/
+#real-alert {
+    margin-left: 30px;
+    font-weight: bold;
+    background-color: yellow;
+    color: red;
+}
+
+/*Establish the test link by making it black and white*/
+#test-only {
+    background-color: #1C1C1C;
+    color: #EEF0F2;
+}
+
+/*Customize both links to be more prominent on the page*/
+.missile-link {
+    font-size: large;
+    display: table;
+    margin: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+

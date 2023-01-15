@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Conference Registrar</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--  Change Font Style!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="Registration.css" type="text/css">
+
+</head>
+
+<body class="m-3">
+
+<div class="jumbotron">
+  <h1>Conference Register Form</h1>
+    <hr class="my-3">
+  <p class="lead">Registration is required by all Employees.</p>
+</div>
+
+<div class="row">
+
+  <div class="col">
+    <form class="ml-2 mr-3">
+
+<!--      Name-->
+      <div class="input-group m-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Enter Your First Name & Last Name</span>
+        </div>
+<!--          Labels for accessibility, class="sr-only" hides labels from the form -->
+          <label class="sr-only" for="first-Name">First Name</label><label class="sr-only" for="last-Name">Last Name</label>
+<!--        I diverged here to do a fun style input, I did limit both inputs to 35 forcing the max length for name to equal 70!-->
+        <input id="first-Name" name="FirstName" maxlength="35" type="text" class="form-control" required>
+        <input id="last-Name" name="lastName" maxlength="35" type="text"  class="form-control" required>
+      </div>
+<!--Name-->
+
+
+
+<!--      Password-->
+        <div class="input-group m-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Enter A Password</span>
+            </div>
+            <label class="sr-only" for="password">Password</label>
+            <input id="password" type="password" class="form-control" required>
+        </div>
+<!--      Password-->
+
+
+
+<!--      Email-->
+        <div class="input-group m-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Enter Email Address</span>
+            </div>
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" type="email" class="form-control" required>
+        </div>
+<!--      Email-->
+
+
+<!--      Tshirt Size-->
+        <label id="shirtSubtitle" class="ml-3">All attendees receive a free Sponsor T-shirt!</label>
+      <div class="input-group m-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="shirtSize">Shirt Size</label>
+        </div>
+        <select class="custom-select" id="shirtSize" required>
+          <option >Select Your Free Shirt Size!</option>
+          <option value="1">Large</option>
+          <option value="2">Medium</option>
+          <option value="3">Small</option>
+        </select>
+      </div>
+
+<!--      Tshirt Size-->
+
+<!--        Birthday-->
+        <div class="input-group m-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Enter Your Birthdate</span>
+            </div>
+            <input id="birthday" type="date" class="form-control" required>
+            <label class="sr-only" for="birthday">Birthday</label>
+        </div>
+<!--        Birthday-->
+
+
+<!--        Receive Emails-->
+
+        <div class="input-group m-3">
+            <div class="input-group">
+                <span class="input-group-text" id="emailTitle">Would you like to receive communications from Conference Sponsors?</span>
+            </div>
+            <div class="input-group-prepend radioButton">
+                <div class="input-group-text">
+                    <input name="sendEmail" id="yes" type="radio" class="form-check" checked>
+                    <label for="yes" class="form-check">Yes</label>
+                </div>
+            <div class="input-group-text">
+                <input name="sendEmail" id="no" type="radio" value ="yes" class="form-check">
+                <label for="no" class="form-check">No</label>
+            </div>
+            </div>
+        </div>
+
+<!--        Receive Emails-->
+
+
+<!--        Session Selection-->
+        <div class="input-group m-3">
+            <div class="input-group">
+                <span class="input-group-text" id="sessionTitle">Select the conference session(s) to register:</span>
+            </div>
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input name="session" id="daytime" type="checkbox" checked>
+                    <label for="daytime" class="form-check">Daytime: 8 AM - 12 PM CST</label>
+                </div>
+                <div class="input-group-text">
+                    <input name="session" id="evening" type="checkbox">
+                    <label for="evening" class="form-check">Evening: 4 PM - 8 PM CST</label>
+                </div>
+            </div>
+        </div>
+<!--        Session Selection-->
+
+
+<!--        Special Requests-->
+        <div class="input-group m-3" >
+            <div class="input-group">
+                <span id="requestsTitle" class="input-group-text">Enter any comments or <span id="requests"> Special Requests </span> below:</span>
+            </div>
+            <textarea name="special-Requests" id="specialRequests" class="form-control" rows="7" cols="70"></textarea>
+            <label class="sr-only" for="specialRequests">Special Requests</label>
+        </div>
+<!--        Special Request-->
+
+
+<!--      submit Button-->
+
+      <div>
+        <input class="btn btn-secondary btn-lg mt-2" type="submit" value="Register for Conference(s)">
+      </div>
+<!--        submit button-->
+
+    </form>
+
+  </div>
+
+</div>
+
+</body>
+</html>

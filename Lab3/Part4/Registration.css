@@ -1,0 +1,77 @@
+
+
+#requests {
+    margin-left: 4px;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    background-image: linear-gradient( 145deg, #827081, #AEA3B0, #EEDCE4);
+}
+
+.input-group-text {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #D4DBEC;
+    color: black;
+}
+
+.input-group-prepend {
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-control {
+    background-color: #EEEFF1;
+    color: black;
+}
+
+.custom-select {
+    background-color: #EEEFF1;
+    color: black;
+}
+
+.jumbotron {
+    display: table;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    background-color: #E7E6F7;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group {
+    text-align: center;
+    margin: auto auto auto auto;
+}
+
+#requestsTitle {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+#yes, #no {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn {
+    display: table;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: auto;
+}
+
+#shirtSubtitle {
+    display: block;
+    margin-left: auto;
+    margin-bottom: -10px;
+    color: black;
+}
