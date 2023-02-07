@@ -84,9 +84,9 @@
     studentAddButton.addEventListener('click', function() {
 
         // setup variables to represent the values of the entry objects
-        let studentName = entryStudentName.value
-        let studentId = entryStudentId.value
-        let studentGPA = entryStudentGpa.value
+        let studentName = entryStudentName.value.trim()
+        let studentId = entryStudentId.value.trim()
+        let studentGPA = entryStudentGpa.value.trim()
 
         // Note: Braggadocios, I designed the REGEX expressions myself-solved through tireless trial and error and research
 
