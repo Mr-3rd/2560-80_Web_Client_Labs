@@ -74,7 +74,7 @@
     let listOfStudents = document.querySelector('#student-list')
 
     // configure a blank alert message
-    let alertMessage = "";
+    let alertMessage = []
 
     // configure the buttons for action reactions
     let studentAddButton = document.querySelector('#add-student')
@@ -104,25 +104,27 @@
 
         // If the names are not correctly entered, add this to the error message
         if (!studentNameResult) {
-            alertMessage = alertMessage + "Please enter a capitalized First and Last Name, seperated by a space. \n"
+            alertMessage.push("Please enter a capitalized First and Last Name, seperated by a space. \n")
         }
 
         // if a value is not present in student ID add this to the error message
         if (!studentIdResult) {
-            alertMessage = alertMessage + "Please enter a Student Id. \n"
+            alertMessage.push("Please enter a Student Id. \n")
         }
 
         // if the GPA does not match the REGEX add this to the error message
         // You must add an "or" statement to verify that the regex is not blank
         if (!studentGPAResult || studentGPA === '') {
-            alertMessage = alertMessage + 'Please enter a valid GPA. (Maximum of 4) ' +
-                'You may include a period for results like "3.9" or "3.79"'
+            alertMessage.push('Please enter a valid GPA. (Maximum of 4) ' +
+                'You may include a period for results like "3.9" or "3.79"')
         }
 
         // if any of the validation failures are present, trigger a error, reset the message and return to entry.
         if (!studentGPAResult || studentGPA === '' || !studentIdResult || !studentNameResult) {
-            alert(alertMessage)
-            alertMessage = ""
+            let errorMessage = alertMessage.join()
+            alert(errorMessage)
+            alertMessage = []
+            return;
         }
         // If all validations succeed
         else {
