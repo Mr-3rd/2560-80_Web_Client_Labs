@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tree Order Form</title>
+
+  <style>
+      
+      input, select {
+          width: 100%;
+          padding: 5px;
+          margin: 5px 5px 5px 0px;
+          box-sizing: border-box;
+      }
+
+      input.error, select.error {
+        border: 2px red solid;
+      }
+
+  </style>
+
+</head>
+<body>
+
+    <h1>Minnesota Tree Order Form</h1>
+
+    <p>Enter information to order your tree. All fields are required.</p>
+
+    <h2>Order Information</h2>
+
+    <label for="homeowner-name">Homeowner Name</label><input id="homeowner-name" name="homeowner-name">
+    <br>
+    <label for="homeowner-house-number">House Number</label><input id="homeowner-house-number" name="homeowner-house-number">
+    <br>
+    <label for="homeowner-street-name">Street Name</label><input id="homeowner-street-name" name="homeowner-street-name">
+    <br>
+    <label for="city">City</label><input id="city" name="city"> 
+    <br>
+    <!-- All orders must be for Minnesota, so this input is not editable -->
+    <label for="state">State</label><input id="state" name="state" value="Minnesota" disabled> 
+    <br>
+    <label for="zipcode">Zip Code</label><input id="zipcode" name="zipcode">
+    <br>
+
+    <label for="tree-type">Tree Type</label>
+    <select id="tree-type">
+        <!-- Unselectable message shown. Since this will be required, it forces the user to actually pick a tree, not just click submit for the default first option -->
+        <option disabled selected value=""> Select a tree </option>  
+        <!-- The options that the user will be allowed to select, or choose from -->
+        <option name="tree-type">Cedar</option>
+        <option name="tree-type">Maple</option>
+        <option name="tree-type">Oak</option>
+    </select>
+    <br>
+
+    <button id="submit-order">Submit Order</button>    
+
+    <h2>Order Summary</h2>
+
+    <p id="order-summary">
+        <!-- TODO Use JavaScript to display the order information, 
+            only if all the required information is entered  -->
+    </p>
+    
+
+
+<script>
+
+    let homeownerNameInput = document.querySelector('#homeowner-name')
+    let homeownerHouseNumberInput = document.querySelector('#homeowner-house-number')
+    let homeownerStreetNameInput = document.querySelector('#homeowner-street-name')
+    let treeTypeSelect = document.querySelector('#tree-type')
+
+    // TODO create a variable for city input element
+    let cityInput = document.querySelector('#city')
+
+    // TODO create a variable for zip code input element
+    let zipcodeInput = document.querySelector('#zipcode')
+    
+    let submitButton = document.querySelector('#submit-order')
+
+    let orderSummaryParagraph = document.querySelector('#order-summary')
+
+    // Create an order number outside of action listener
+    let orderNumber = 1;
+
+    submitButton.addEventListener('click', function() {
+
+        let name = homeownerNameInput.value 
+        let houseNumber = homeownerHouseNumberInput.value
+        let streetName = homeownerStreetNameInput.value
+        let treeType = treeTypeSelect.value
+
+        // TODO get the value from the input#city
+        let city = cityInput.value
+        // TODO get the value from the input#zipcode
+        let zipcode = zipcodeInput.value
+
+        // TODO Validate that all six input and select elements have been completed
+        //  - check they all have a value
+
+        // TODO Validate the zipcode is in the range 55001 and 56763. 
+        // to check that the zip code is in Minnesota.
+        // Make sure your script doesn't accept non-numeric input for the zip code.
+
+        // Optional extra: add the class .error to any inputs with an error (and only inputs with an error)
+        // to give the user visual feedback for which inputs need to be fixed or completed. 
+        // There's a style for input.error and select.error defined in the styles (in the head)
+        // which will be applied if you give the class .error to any elements on the page. 
+        // Make sure you remove this class when the form is completed correctly.
+
+        let errors = []
+        
+        // If a form element has not been completed, or if the data is not valid, 
+        // add an error message to the errors array. (Hint: use push to add to the end of the array)
+        // Add one error message for each problem with the form.
+
+        // set a blank error message
+        let errorMessage = '';
+
+        // If no space is present or the name is blank, create an error message, add it to an array of error messages,
+        // and set the error class
+        if (name === '' || name.includes(' ') === false) {
+            errorMessage = ' You must enter a valid first and last name'
+            errors.push(errorMessage)
+            homeownerNameInput.setAttribute('class' , 'error')
+        } else {
+            homeownerNameInput.removeAttribute('class')
+        }
+
+        // if the house number is Not a Number (NaN), or house number is blank, create an error message,
+        // add it to an array of error messages and set the error class
+        if(houseNumber === '' || isNaN(houseNumber))  {
+            errorMessage = ' You must enter a valid house number'
+            errors.push(errorMessage)
+            homeownerHouseNumberInput.setAttribute('class' , 'error')
+        } else {
+            homeownerHouseNumberInput.removeAttribute('class')
+        }
+
+        // if the street name is blank, create an error message,
+        // add it to an array of error messages and set the error class
+        if(streetName === '') {
+            errorMessage = ' You must enter a valid street name'
+            errors.push(errorMessage)
+            homeownerStreetNameInput.setAttribute('class' , 'error')
+        } else {
+            homeownerStreetNameInput.removeAttribute('class')
+        }
+
+        // if tree type is blank, create an error message,
+        // add it to an array of error messages and set the error class
+        if(treeType === '') {
+            errorMessage = ' You must enter a valid tree type'
+            errors.push(errorMessage)
+            treeTypeSelect.setAttribute('class' , 'error')
+        } else {
+            treeTypeSelect.removeAttribute('class')
+        }
+
+        // if city is blank, create an error message,
+        // add it to an array of error messages and set the error class
+        if(city === '') {
+            errorMessage = ' You must enter a valid city in Minnesota'
+            errors.push(errorMessage)
+            cityInput.setAttribute('class' , 'error')
+        } else {
+            cityInput.removeAttribute('class')
+        }
+
+        // if the zipcode is not in Minnesota, or the zipcode is blank, create an error message,
+        // add it to an array of error messages and set the error class
+        if(zipcode === '' || isMinnesotaZip(zipcode) === false) {
+            errorMessage = ' You must enter a valid Minnesota Zipcode'
+            errors.push(errorMessage)
+            zipcodeInput.setAttribute('class' , 'error')
+        } else {
+            zipcodeInput.removeAttribute('class')
+        }
+        
+        // TODO - If there are any errors after checking all of the input elements, 
+        // display an alert with all of the error messages. (Hint: use join)
+        // and then return from this function to prevent further processing
+
+
+        // TODO - If there are no errors, use a template string to display an order 
+        // summary in the order summary paragraph.
+
+        // If any errors of validation occurred
+        if (errors.length > 0) {
+            // Display the errors in an ugly format
+            alert(errors)
+        } else {
+            // If no errors in validation occurred, display a string that includes the summary of the valid entry
+            let orderDisplayText = `Order Number ${orderNumber}: ${name}, ${houseNumber} ${streetName} ${city}, ${zipcode}. Tree Chosen: ${treeType} `;
+            orderSummaryParagraph.innerHTML = orderSummaryParagraph.innerHTML + " " + orderDisplayText;
+            // Count up to display an order number
+            orderNumber = orderNumber + 1;
+        }
+
+    })
+
+    function isMinnesotaZip(code) {
+        if (code >= 55001 && code <= 56763) {
+            return true
+        }
+        return false
+    }
+
+
+
+</script>
+
+</body>
+</html>
+
+
