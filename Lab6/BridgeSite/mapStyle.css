@@ -1,0 +1,16 @@
+/*Generate a bridge that is in the middle of the page*/
+#bridge-map {
+    width: 80%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Try to limit the visual impact of the Icon Attribution*/
+#iconAttribution {
+    font-size: xx-small;
+    margin-top: 0;
+    text-align: right;
+    margin-right: auto;
+    padding-right: 11%;
+}

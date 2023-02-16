@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Longest Bridges in US</title>
+  <!-- Leaflet script and CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+<!--My Script - sets the chart -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
+  <!-- Our stylesheet. Make sure the size of the map div is set before trying to draw the map.-->
+  <link rel="stylesheet" type="text/css" href="mapStyle.css">
+  <!-- Our script, uses Leaflet to draw the maps and map components for this page  -->
+  <script async defer src="maps.js"></script>
+
+</head>
+<body>
+
+<!--Create a heading for the map-->
+<h1>Where are the Largest Bridges in America?</h1>
+<!--Create the container to hold the map-->
+<div id="bridge-map"></div>
+
+
+<!--Add an attribution to the bottom of the document for the bridge icon-->
+<p id="iconAttribution">
+    <a href="https://www.flaticon.com/free-icons/bridge" target="_blank" title="bridge icons">Bridge icons created by IdeaGrafc - Flaticon</a>
+</p>
+
+<!--Chart header-->
+<h2>Chart Featuring the Longest American Bridges</h2>
+
+<!--canvas container to draw the chart-->
+<canvas id="bridgesChart"></canvas>
+
+</body>
+</html>
