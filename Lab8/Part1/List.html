@@ -4,7 +4,7 @@
   <title>Entry List</title>
   <script src="https://unpkg.com/vue@next"></script>
   
-  
+<!--  style sheet at the top-->
   <style>
     h3 {
       margin-bottom: -15px;
@@ -17,15 +17,17 @@
 
 <h1>Task List Generator</h1>
 
-
-
+<!--create the view template-->
 <div id="app">
+<!--  Use a v-model to create a link to the newTask variable in script-->
   <label for="task">Please enter your Talk List Item: </label>
   <input id="task" v-model="newTask">
   <button v-on:click="addTask">Add Task</button>
 
+<!--  when a newTask is added to the taskList display the below block-->
   <h3 v-if="taskList.length > 0">Task List</h3>
   <ul>
+<!--    use v-for to automatically add li items per the dynamically filled list in the script below-->
     <li v-for="task in taskList">{{ task }}</li>
   </ul>
 
@@ -36,12 +38,14 @@
   let app = Vue.createApp({
     data() {
       return {
+        // create blank data points to be completed by user
         newTask: '',
         taskList: [],
       }
     },
     methods: {
       addTask() {
+        // construct a list by adding the use entry
         this.taskList.push(this.newTask)
         this.newTask = ''
       }
