@@ -1,0 +1,29 @@
+--
+What does the " ... was accessed during render but is not defined on instance" Vue warning message mean?
+
+This message occurs when the HTML of a Vue View Template calls a method, computation, or form of variable that has not been
+properly created, returned, or developed from the model configuration done in the script.
+
+If you call a method that has not been created, if you call a method that does not return data properly, or if you reference
+a variable you hadn't created (Misspellings anyone?!)
+
+--
+Can you safely ignore it? 
+
+Technically, this type of error can be ignored. The tool appears to skip past the setup object.
+
+caveat to that - if you expect a type of data and you receive this error instead, you will need to correct the error 
+if you want your model data to be generated correctly 
+
+(So no, fix that error - it means something is not generating properly)
+
+--
+What causes it, and how do you fix it?
+
+I've addressed this in little bits,
+
+-Check your spelling - ensure your namings match correctly (No auto-complete to sort this one!)
+-Confirm that your methods perform proper data returns for variables or ensure that you edit some form of 'this' object
+  to guarantee the manipulations are lasting
+-Review the Computed sections to ensure all calls perform the same
+-Confirm that all v- calls reference the correct object in the HTML code
