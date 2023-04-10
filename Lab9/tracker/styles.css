@@ -1,0 +1,21 @@
+#records {
+    max-height: 250px;
+    overflow: scroll;
+}
+
+/*create the style that hides the app until it is fully loaded*/
+[v-cloak] {
+    display: none;
+}
+
+.AppTraining {
+    background-color: #8CFBDE;
+}
+
+.Noodling {
+    background-color: #FFC759;
+}
+
+.FullSong{
+    background-color: #F7567C;
+}
